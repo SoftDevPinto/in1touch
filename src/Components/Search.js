@@ -131,6 +131,15 @@ const styles = {
   mapContainer: {
     marginLeft: '200px', // Adjust the margin as needed
   },
+  input: {
+    width: '100%',
+    padding: '8px',
+    marginBottom: '16px',
+    border: '1px solid #ccc',
+    borderRadius: '10px', // Add the border-radius you prefer
+  },
+  
+
 };
 
 const Search = () => {
@@ -152,18 +161,18 @@ const Search = () => {
           {
             "title": "test",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterView.html?eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div><strong>Title:</strong> test <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 10/12/2020 17:16<br /><strong>Address:</strong> Manitoba, Canada <br /><strong>Description:</strong> <br /><strong>URL:</strong> <a href='https://live1.in1touch.org/viewEvent.html?productId=7477' target='_blank'>https://live1.in1touch.org/viewEvent.html?productId=7477</a> <br /><strong>End Date:</strong> 10/13/2020 17:16</div><div style='margin-left: 455px; margin-bottom: 5px; text-align: center;'><strong>MAP:</strong> <img src='null' style='border: 1px solid black; margin-top: -60px;' width='400' height='300' /><br /></div></div>"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div><strong>Title:</strong> test <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 10/12/2020 17:16<br /><strong>Address:</strong> Manitoba, Canada <br /><strong>Description:</strong> <br /><strong>URL:</strong> <a href='https://live1.in1touch.org/viewEvent.html?productId=7477' target='_blank'>https://live1.in1touch.org/viewEvent.html?productId=7477</a> <br /><strong>End Date:</strong> 10/13/2020 17:16</div><div style='margin-left: 443px; margin-top: -50px; text-align: center;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.86599700,-97.11053500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.86599700,-97.11053500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div>"
           },
           
           {
             "title": "Event Management Software Seminar - Tickets",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=660&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Event Management Software Seminar - Tickets <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 12/30/2016 12:00<br /><strong>Address:</strong> <br /> 553 St.Mary's Rd.<br />Winnipeg, Manitoba R2M 3L4<br> Canada </div><div style='flex-grow: 1; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; text-decoration: underline;'>Wednesday September 24</span><sup style='font-weight: bold; text-decoration: underline;'>th</sup> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>11:30 AM &ndash; 1:00 PM <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>The Manitoba Club</span> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>194 Broadway <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; font-style: italic;'>Complimentary Lunch will be served</span></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Cancellations:</span> All cancellations should be made by Monday September 22 12:00 PM</span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Refunds:</span> No Refunds for Cancellations after September 22</span></p></div><div style='flex-grow: 1; margin-left: 250px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.86599700,-97.11053500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.86599700,-97.11053500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div>"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Event Management Software Seminar - Tickets <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 12/30/2016 12:00<br /><strong>Address:</strong> <br /> 553 St.Mary's Rd.<br />Winnipeg, Manitoba R2M 3L4<br> Canada </div><div style='flex-grow: 1; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; text-decoration: underline;'>Wednesday September 24</span><sup style='font-weight: bold; text-decoration: underline;'>th</sup> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>11:30 AM &ndash; 1:00 PM <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>The Manitoba Club</span> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>194 Broadway <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; font-style: italic;'>Complimentary Lunch will be served</span></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Cancellations:</span> All cancellations should be made by Monday September 22 12:00 PM</span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Refunds:</span> No Refunds for Cancellations after September 22</span></p></div><div style='flex-grow: 1; margin-left: 265px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.86599700,-97.11053500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.86599700,-97.11053500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div>"
           },
           {
             "title": "2016 Winnipeg Career Symposium Volunteers",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=6430&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> 2016 Winnipeg Career Symposium Volunteers <br /><strong>Categories:</strong> lunch, AGM, <br /><strong>Start Date:</strong> 06/09/2016 18:00<br /><strong>Address:</strong> <br /> RBC Convention Centre<br>375 York St.<br>Winnipeg, Manitoba R3C 3J3<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>2016 Winnipeg Rotary Career Symposium</span><br /><span style='font-weight: bold;'>May 2nd - 4th, 2016</span></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>The Career Symposium is where Students, Parents and Educators all meet face-to-face with representatives from all sectors of the labour market. It is a key time for everyone looking to enter the workforce or better understand present and future opportunities. &nbsp;</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>At the Career Symposium, attendees will have a chance to find jobs and submit resumes, learn about internships, volunteer opportunities, and leading academic programs.</span></p><p style='max-width: 500px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>The MAMRT is looking for volunteers to staff the MAMRT Booth.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Interested members and students are asked to register online.</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Volunteers may be offered a different shift to ensure coverage and allow for even representation of each modality.</span></p><p style='max-width: 600px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>As the required number of volunteers are reached for each time slot; that time slot will no longer be seen.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>Volunteers: please arrive at least 15 minutes prior to your time slot to allow time for parking and registration.</strong></span></p></div><div style='flex-grow: 1; margin-right: 1px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.88900000,-97.14450000&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.88900000,-97.14450000&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300'/></div></div><hr />"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> 2016 Winnipeg Career Symposium Volunteers <br /><strong>Categories:</strong> lunch, AGM, <br /><strong>Start Date:</strong> 06/09/2016 18:00<br /><strong>Address:</strong> <br /> RBC Convention Centre<br>375 York St.<br>Winnipeg, Manitoba R3C 3J3<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>2016 Winnipeg Rotary Career Symposium</span><br /><span style='font-weight: bold;'>May 2nd - 4th, 2016</span></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>The Career Symposium is where Students, Parents and Educators all meet face-to-face with representatives from all sectors of the labour market. It is a key time for everyone looking to enter the workforce or better understand present and future opportunities. &nbsp;</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>At the Career Symposium, attendees will have a chance to find jobs and submit resumes, learn about internships, volunteer opportunities, and leading academic programs.</span></p><p style='max-width: 500px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>The MAMRT is looking for volunteers to staff the MAMRT Booth.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Interested members and students are asked to register online.</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Volunteers may be offered a different shift to ensure coverage and allow for even representation of each modality.</span></p><p style='max-width: 600px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>As the required number of volunteers are reached for each time slot; that time slot will no longer be seen.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>Volunteers: please arrive at least 15 minutes prior to your time slot to allow time for parking and registration.</strong></span></p></div><div style='flex-grow: 1; margin-left: -10px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.88900000,-97.14450000&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.88900000,-97.14450000&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300'/></div></div><hr />"
           },
           
           {
@@ -218,7 +227,7 @@ const Search = () => {
           {
             "title": "Regular DoDAF Short Courses",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=4902&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Regular DoDAF Short Courses <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 09/13/2010 11:01<br /><strong>Address:</strong> <br /> 7054 Haycock Road<br>UVA Northern Virginia Center<br>Falls Church, Virginia 22043<br> United States </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Offering a comprehensive overview of the Department of Defense Architecture Framework (DoDAF), these short courses are designed for professionals seeking to enhance their understanding of architectural frameworks in a concise format. The session spans from Monday, September 13, 2010, to September 17, 2010, at the UVA Northern Virginia Center.</p><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4902'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 340px; margin-top: -60px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=38.89894740,-77.20027450&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|38.89894740,-77.20027450&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Regular DoDAF Short Courses <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 09/13/2010 11:01<br /><strong>Address:</strong> <br /> 7054 Haycock Road<br>UVA Northern Virginia Center<br>Falls Church, Virginia 22043<br> United States </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Offering a comprehensive overview of the Department of Defense Architecture Framework (DoDAF), these short courses are designed for professionals seeking to enhance their understanding of architectural frameworks in a concise format. The session spans from Monday, September 13, 2010, to September 17, 2010, at the UVA Northern Virginia Center.</p><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4902'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 350px; margin-top: -60px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=38.89894740,-77.20027450&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|38.89894740,-77.20027450&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
           },
           
           {
@@ -242,7 +251,7 @@ const Search = () => {
           {
             "title": "AMLS Annual Golf Tournament",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=4596&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> AMLS Annual Golf Tournament <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 06/30/2010 18:00<br /><strong>Address:</strong> <br /> St. Boniface Golf Course<br>100 Youville Street<br>Winnipeg, Manitoba R2H 2S1<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Join the AMLS for their Annual Golf Tournament, featuring a PMI Manitoba 9 Hole Texas Scramble Golf Tourney. This event is set for September 15th, 2009, at St. Boniface Golf Course, welcoming members and guests alike. Fees vary, with dinner and prizes included. Previous golf experience is not necessary, and prize sponsorship is welcome. For any inquiries, contact 954-4390.</p><ul style='max-width: 300px;'><li>Register as a 4 person team or as an individual.</li><li>Dinner and Prizes included.</li><li>Previous golf experience not necessary.</li><li>Prize sponsorship welcome!</li></ul><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4596'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 280px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.87387140,-97.10681510&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.87387140,-97.10681510&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> AMLS Annual Golf Tournament <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 06/30/2010 18:00<br /><strong>Address:</strong> <br /> St. Boniface Golf Course<br>100 Youville Street<br>Winnipeg, Manitoba R2H 2S1<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Join the AMLS for their Annual Golf Tournament, featuring a PMI Manitoba 9 Hole Texas Scramble Golf Tourney. This event is set for September 15th, 2009, at St. Boniface Golf Course, welcoming members and guests alike. Fees vary, with dinner and prizes included. Previous golf experience is not necessary, and prize sponsorship is welcome. For any inquiries, contact 954-4390.</p><ul style='max-width: 300px;'><li>Register as a 4 person team or as an individual.</li><li>Dinner and Prizes included.</li><li>Previous golf experience not necessary.</li><li>Prize sponsorship welcome!</li></ul><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4596'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 275px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.87387140,-97.10681510&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.87387140,-97.10681510&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
           },
           
           {
@@ -262,17 +271,18 @@ const Search = () => {
       };
 
       const lowerCaseEventTitle = eventTitle.toLowerCase();
+    const lowerCaseCategory = category.toLowerCase();
 
-      const results = jsonData.events.filter(event =>
-        event.title.toLowerCase().includes(lowerCaseEventTitle)
-      );
+    const results = jsonData.events.filter(event =>
+      event.title.toLowerCase().includes(lowerCaseEventTitle) &&
+      (lowerCaseCategory === '' || event.details.toLowerCase().includes(lowerCaseCategory))
+    );
 
-      setSearchResults(results);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
+    setSearchResults(results);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
   const handlePrint = () => {
     console.log('Print clicked!');
   };
@@ -313,27 +323,24 @@ const Search = () => {
           onChange={(e) => setRegistrationsAllowed(e.target.value)}
         />
   
-        <div style={styles.checkboxContainer}>
-          <div style={styles.checkboxLabel}>
-            <label>Active:</label>
-          </div>
-          <div style={styles.checkbox}>
-            <input type="checkbox" checked={isActive} onChange={() => setIsActive(!isActive)} />
-          </div>
-        </div>
-  
-        <div style={styles.checkboxContainer}>
-          <div style={styles.checkboxLabel}>
-            <label>Finished:</label>
-          </div>
-          <div style={styles.checkbox}>
-            <input
-              type="checkbox"
-              checked={isFinished}
-              onChange={() => setIsFinished(!isFinished)}
-            />
-          </div>
-        </div>
+  <div style={{ ...styles.checkboxContainer, marginLeft: '14px' }}>
+  <div style={styles.checkboxLabel}>
+    <label>Active:</label>
+  </div>
+  <div style={styles.checkbox}>
+    <input type="checkbox" checked={isActive} onChange={() => setIsActive(!isActive)} />
+  </div>
+</div>
+
+
+<div style={styles.checkboxContainer}>
+  <div style={styles.checkboxLabel}>
+    <label>Finished:</label>
+  </div>
+  <div style={styles.checkbox}>
+    <input type="checkbox" checked={isFinished} onChange={() => setIsFinished(!isFinished)} />
+  </div>
+</div>
   
         <div style={styles.buttonContainer}>
           <button style={styles.button} onClick={handleSearch}>
@@ -350,7 +357,7 @@ const Search = () => {
   
       {searchResults.length > 0 && (
   <div style={styles.centeredResultsContainer}>
-    <h2>Search Results:</h2>
+  <h2 style={{ textAlign: 'center' }}>Search Results:</h2>
     {searchResults.map((result, index) => (
       <div key={index} style={styles.searchResult}>
         <div style={styles.leftSection}>
