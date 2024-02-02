@@ -79,25 +79,28 @@ const styles = {
     borderRadius: '8px',
     padding: '10px',
     marginBottom: '10px',
-    width: '650px', // Set a fixed width for all search results
-    boxSizing: 'border-box', // Ensure padding doesn't exceed the fixed width
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center', // Centering horizontally
+    alignItems: 'flex-start', // Align items to the start of the cross axis (left)
+    textAlign: 'left', // Align text to the left
+    width: '100%', // Make the result width 100% of the container
     backgroundColor: '#fff',
   },
   resultTitle: {
     fontSize: '18px',
     fontWeight: 'bold',
     marginBottom: '8px',
+    marginLeft: '10px', // Adjust margin as needed
   },
   resultLink: {
     color: 'blue',
     textDecoration: 'underline',
     marginBottom: '8px',
+    marginLeft: '10px', // Adjust margin as needed
   },
   resultDetails: {
     fontSize: '14px',
+    marginLeft: '10px', // Adjust margin as needed
   },
   centeredResultsContainer: {
     display: 'flex',
@@ -111,6 +114,16 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-start', // Align items to the start of the cross axis (top)
+  },
+  leftSection: {
+    marginRight: '20px', // Adjust margin as needed
+  },
+  rightSection: {
+    flex: '1', // Take remaining width
+    
+  },
+  mapContainer: {
+    marginLeft: '200px', // Adjust the margin as needed
   },
 };
 
@@ -133,8 +146,9 @@ const Search = () => {
           {
             "title": "test",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=7477&eventRosterId=17",
-            "details": "<br />Title: test <br />Categories: <br />Start Date: 10/12/2020 17:16<br />Address:  <br /> Manitoba<br> Canada <br />Description:  <br />URL: https://live1.in1touch.org/viewEvent.html?productId=7477 <br />End Date: 10/13/2020 17:16 <br />MAP: <img src=\"null\" style=\"border:1px solid black;\" width=\"400\" height=\"300\"> <br /><br /><hr />"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div><strong>Title:</strong> test <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 10/12/2020 17:16<br /><strong>Address:</strong> Manitoba, Canada <br /><strong>Description:</strong> <br /><strong>URL:</strong> <a href='https://live1.in1touch.org/viewEvent.html?productId=7477' target='_blank'>https://live1.in1touch.org/viewEvent.html?productId=7477</a> <br /><strong>End Date:</strong> 10/13/2020 17:16</div><div style='margin-left: 20px;'><strong>MAP:</strong> <img src='null' style='border: 1px solid black;' width='400' height='300' /> </div></div>"
           },
+          
           {
             "title":"Event Management Software Seminar - Tickets",
             "link":"https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=660&eventRosterId=17",
@@ -318,21 +332,27 @@ const Search = () => {
       </div>
   
       {searchResults.length > 0 && (
-        <div style={styles.centeredResultsContainer}>
-          <h2>Search Results:</h2>
-          {searchResults.map((result, index) => (
-            <div key={index} style={styles.searchResult}>
-              <p style={styles.resultTitle}>Title: {result.title}</p>
-              <p style={styles.resultLink}>
-                Link: <a href={result.link} target="_blank" rel="noopener noreferrer">{result.link}</a>
-              </p>
-              <div style={styles.resultDetails} dangerouslySetInnerHTML={{ __html: result.details }} />
-            </div>
-          ))}
+  <div style={styles.centeredResultsContainer}>
+    <h2>Search Results:</h2>
+    {searchResults.map((result, index) => (
+      <div key={index} style={styles.searchResult}>
+        <div style={styles.leftSection}>
+          <p style={styles.resultTitle}>Title: {result.title}</p>
+          <p style={styles.resultLink}>
+            Link: <a href={result.link} target="_blank" rel="noopener noreferrer">{result.link}</a>
+          </p>
         </div>
-      )}
+        <div style={styles.rightSection}>
+          <div style={styles.resultDetails} dangerouslySetInnerHTML={{ __html: result.details }} />
+        </div>
+      </div>
+    ))}
+  </div>
+)}
+
     </div>
   );
 }
+
   
 export default Search;
