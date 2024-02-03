@@ -13,7 +13,8 @@ const styles = {
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
     maxWidth: '400px',
     position: 'sticky',
-    top: '50px', // Adjust this value to your desired distance
+    top: '100px', // Adjust this to move the search container down or up.
+    zIndex: 10, 
   },
   
   
@@ -39,12 +40,12 @@ const styles = {
   },
   buttonContainer: {
     display: 'flex',
-    gap: '10px', // Adjust the gap as needed
+    gap: '10px', // Adjust the gap here.
   },
   button: {
     appearance: 'button',
     backfaceVisibility: 'hidden',
-    backgroundColor: '#405cf5',
+    backgroundColor: '#0082e6',
     borderRadius: '6px',
     borderWidth: '0',
     boxShadow: 'rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0',
@@ -67,8 +68,11 @@ const styles = {
     WebkitUserSelect: 'none',
     touchAction: 'manipulation',
     width: '100%',
+    '&:hover': { // Trying to add hover effect to the button but not working right now.
+      backgroundColor: '#005bb8', // Change the background color on hover
+    },
   },
-
+  
   searchResultsContainer: {
     marginTop: '20px',
     width: '100%',
@@ -76,7 +80,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center', // Centering horizontally
     backgroundColor: '#fff',
-    marginLeft: '-100px', // Adjust margin as needed
+    marginLeft: '-100px', // Adjust margin
   },
 
   searchResult: {
@@ -90,23 +94,23 @@ const styles = {
     textAlign: 'left', // Align text to the left
     width: '100%', // Make the result width 100% of the container
     backgroundColor: '#fff',
-    marginLeft: '-45px', // Adjust margin as needed
+    marginLeft: '-45px', 
   },
   resultTitle: {
     fontSize: '18px',
     fontWeight: 'bold',
     marginBottom: '8px',
-    marginLeft: '10px', // Adjust margin as needed
+    marginLeft: '10px', 
   },
   resultLink: {
     color: 'blue',
     textDecoration: 'underline',
     marginBottom: '8px',
-    marginLeft: '10px', // Adjust margin as needed
+    marginLeft: '10px', 
   },
   resultDetails: {
     fontSize: '14px',
-    marginLeft: '10px', // Adjust margin as needed
+    marginLeft: '10px',
   },
   centeredResultsContainer: {
     display: 'flex',
@@ -162,18 +166,18 @@ const Search = () => {
           {
             "title": "test",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterView.html?eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div><strong>Title:</strong> test <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 10/12/2020 17:16<br /><strong>Address:</strong> Manitoba, Canada <br /><strong>Description:</strong> <br /><strong>URL:</strong> <a href='https://live1.in1touch.org/viewEvent.html?productId=7477' target='_blank'>https://live1.in1touch.org/viewEvent.html?productId=7477</a> <br /><strong>End Date:</strong> 10/13/2020 17:16</div><div style='margin-left: 443px; margin-top: -50px; text-align: center;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.86599700,-97.11053500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.86599700,-97.11053500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div>"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div><strong>Title:</strong> test <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 10/12/2020 17:16<br /><strong>Address:</strong> Manitoba, Canada <br /><strong>Description:</strong> <br /><strong>URL:</strong> <a href='https://live1.in1touch.org/viewEvent.html?productId=7477' target='_blank'>https://live1.in1touch.org/viewEvent.html?productId=7477</a> <br /><strong>End Date:</strong> 10/13/2020 17:16</div><div style='margin-left: 525px; margin-top: -50px; text-align: center;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.86599700,-97.11053500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.86599700,-97.11053500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div>"
           },
           
           {
             "title": "Event Management Software Seminar - Tickets",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=660&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Event Management Software Seminar - Tickets <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 12/30/2016 12:00<br /><strong>Address:</strong> <br /> 553 St.Mary's Rd.<br />Winnipeg, Manitoba R2M 3L4<br> Canada </div><div style='flex-grow: 1; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; text-decoration: underline;'>Wednesday September 24</span><sup style='font-weight: bold; text-decoration: underline;'>th</sup> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>11:30 AM &ndash; 1:00 PM <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>The Manitoba Club</span> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>194 Broadway <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; font-style: italic;'>Complimentary Lunch will be served</span></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Cancellations:</span> All cancellations should be made by Monday September 22 12:00 PM</span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Refunds:</span> No Refunds for Cancellations after September 22</span></p></div><div style='flex-grow: 1; margin-left: 265px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.86599700,-97.11053500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.86599700,-97.11053500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div>"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Event Management Software Seminar - Tickets <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 12/30/2016 12:00<br /><strong>Address:</strong> <br /> 553 St.Mary's Rd.<br />Winnipeg, Manitoba R2M 3L4<br> Canada </div><div style='flex-grow: 1; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; text-decoration: underline;'>Wednesday September 24</span><sup style='font-weight: bold; text-decoration: underline;'>th</sup> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>11:30 AM &ndash; 1:00 PM <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>The Manitoba Club</span> <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'>194 Broadway <o:p></o:p></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold; font-style: italic;'>Complimentary Lunch will be served</span></span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Cancellations:</span> All cancellations should be made by Monday September 22 12:00 PM</span></p>\r\n<p style='max-width: 300px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>Refunds:</span> No Refunds for Cancellations after September 22</span></p></div><div style='flex-grow: 1; margin-left: 305px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.86599700,-97.11053500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.86599700,-97.11053500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div>"
           },
           {
             "title": "2016 Winnipeg Career Symposium Volunteers",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=6430&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> 2016 Winnipeg Career Symposium Volunteers <br /><strong>Categories:</strong> lunch, AGM, <br /><strong>Start Date:</strong> 06/09/2016 18:00<br /><strong>Address:</strong> <br /> RBC Convention Centre<br>375 York St.<br>Winnipeg, Manitoba R3C 3J3<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>2016 Winnipeg Rotary Career Symposium</span><br /><span style='font-weight: bold;'>May 2nd - 4th, 2016</span></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>The Career Symposium is where Students, Parents and Educators all meet face-to-face with representatives from all sectors of the labour market. It is a key time for everyone looking to enter the workforce or better understand present and future opportunities. &nbsp;</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>At the Career Symposium, attendees will have a chance to find jobs and submit resumes, learn about internships, volunteer opportunities, and leading academic programs.</span></p><p style='max-width: 500px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>The MAMRT is looking for volunteers to staff the MAMRT Booth.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Interested members and students are asked to register online.</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Volunteers may be offered a different shift to ensure coverage and allow for even representation of each modality.</span></p><p style='max-width: 600px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>As the required number of volunteers are reached for each time slot; that time slot will no longer be seen.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>Volunteers: please arrive at least 15 minutes prior to your time slot to allow time for parking and registration.</strong></span></p></div><div style='flex-grow: 1; margin-left: -10px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.88900000,-97.14450000&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.88900000,-97.14450000&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300'/></div></div><hr />"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> 2016 Winnipeg Career Symposium Volunteers <br /><strong>Categories:</strong> lunch, AGM, <br /><strong>Start Date:</strong> 06/09/2016 18:00<br /><strong>Address:</strong> <br /> RBC Convention Centre<br>375 York St.<br>Winnipeg, Manitoba R3C 3J3<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><span style='font-weight: bold;'>2016 Winnipeg Rotary Career Symposium</span><br /><span style='font-weight: bold;'>May 2nd - 4th, 2016</span></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>The Career Symposium is where Students, Parents and Educators all meet face-to-face with representatives from all sectors of the labour market. It is a key time for everyone looking to enter the workforce or better understand present and future opportunities. &nbsp;</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>At the Career Symposium, attendees will have a chance to find jobs and submit resumes, learn about internships, volunteer opportunities, and leading academic programs.</span></p><p style='max-width: 500px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>The MAMRT is looking for volunteers to staff the MAMRT Booth.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Interested members and students are asked to register online.</span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'>Volunteers may be offered a different shift to ensure coverage and allow for even representation of each modality.</span></p><p style='max-width: 600px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>As the required number of volunteers are reached for each time slot; that time slot will no longer be seen.</strong></span></p><p style='max-width: 400px; word-wrap: break-word;'><span style='font-family: Verdana;'><strong>Volunteers: please arrive at least 15 minutes prior to your time slot to allow time for parking and registration.</strong></span></p></div><div style='flex-grow: 1; margin-left: 50px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.88900000,-97.14450000&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.88900000,-97.14450000&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300'/></div></div><hr />"
           },
           
           {
@@ -246,13 +250,13 @@ const Search = () => {
           {
             "title": "Professional Development Seminars",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=4947&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Professional Development Seminars <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 07/30/2010 12:10<br /><strong>Address:</strong> <br /> 1670 Portage Ave<br>Viscount Gort Hotel<br>Winnipeg, Manitoba R3J 0C9<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Scheduled for Wednesday, January 13, 2010, at the Viscount Gort Hotel, this seminar offers professional development opportunities in areas such as building mentoring relationships and growing strong client relationships. Presenters include Deri Latimer and Cec Hanec, focusing on the importance of mentoring, first impressions, building trust, and business relationship management.</p><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4947'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 300px; margin-top: -60px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.87971200,-97.20360500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.87971200,-97.20360500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> Professional Development Seminars <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 07/30/2010 12:10<br /><strong>Address:</strong> <br /> 1670 Portage Ave<br>Viscount Gort Hotel<br>Winnipeg, Manitoba R3J 0C9<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Scheduled for Wednesday, January 13, 2010, at the Viscount Gort Hotel, this seminar offers professional development opportunities in areas such as building mentoring relationships and growing strong client relationships. Presenters include Deri Latimer and Cec Hanec, focusing on the importance of mentoring, first impressions, building trust, and business relationship management.</p><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4947'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 320px; margin-top: -60px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.87971200,-97.20360500&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.87971200,-97.20360500&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
           },
           
           {
             "title": "AMLS Annual Golf Tournament",
             "link": "https://live1.in1touch.org/client/event/roster/eventRosterDetails.html?productId=4596&eventRosterId=17",
-            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> AMLS Annual Golf Tournament <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 06/30/2010 18:00<br /><strong>Address:</strong> <br /> St. Boniface Golf Course<br>100 Youville Street<br>Winnipeg, Manitoba R2H 2S1<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Join the AMLS for their Annual Golf Tournament, featuring a PMI Manitoba 9 Hole Texas Scramble Golf Tourney. This event is set for September 15th, 2009, at St. Boniface Golf Course, welcoming members and guests alike. Fees vary, with dinner and prizes included. Previous golf experience is not necessary, and prize sponsorship is welcome. For any inquiries, contact 954-4390.</p><ul style='max-width: 300px;'><li>Register as a 4 person team or as an individual.</li><li>Dinner and Prizes included.</li><li>Previous golf experience not necessary.</li><li>Prize sponsorship welcome!</li></ul><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4596'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 275px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.87387140,-97.10681510&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.87387140,-97.10681510&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
+            "details": "<div style='display: flex; justify-content: space-between; text-align: left; padding: 10px;'><div style='flex-grow: 1;'><strong>Title:</strong> AMLS Annual Golf Tournament <br /><strong>Categories:</strong> <br /><strong>Start Date:</strong> 06/30/2010 18:00<br /><strong>Address:</strong> <br /> St. Boniface Golf Course<br>100 Youville Street<br>Winnipeg, Manitoba R2H 2S1<br> Canada </div><div style='flex-grow: 2; margin-left: 20px;'><strong>Description:</strong> <p style='max-width: 300px; word-wrap: break-word;'>Join the AMLS for their Annual Golf Tournament, featuring a PMI Manitoba 9 Hole Texas Scramble Golf Tourney. This event is set for September 15th, 2009, at St. Boniface Golf Course, welcoming members and guests alike. Fees vary, with dinner and prizes included. Previous golf experience is not necessary, and prize sponsorship is welcome. For any inquiries, contact 954-4390.</p><ul style='max-width: 300px;'><li>Register as a 4 person team or as an individual.</li><li>Dinner and Prizes included.</li><li>Previous golf experience not necessary.</li><li>Prize sponsorship welcome!</li></ul><p style='max-width: 300px; word-wrap: break-word;'>URL: <a href='https://live1.in1touch.org/viewEvent.html?productId=4596'>Event Details</a></p></div><div style='flex-grow: 1; margin-left: 300px; margin-top: -40px;'><strong>MAP:</strong> <img src='https://maps.google.com/maps/api/staticmap?center=49.87387140,-97.10681510&zoom=15&size=400x300&maptype=roadmap&markers=color:red|label:|49.87387140,-97.10681510&sensor=false&key=AIzaSyDzfes3CjnLiA-TVpM4K60cR4g6TQ-U7pE' style='border: 1px solid black;' width='400' height='300' /></div></div><hr />"
           },
           
           {

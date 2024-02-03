@@ -1,17 +1,38 @@
-import { useRef } from 'react';
-import {FaBars, FaTimes} from 'react-icons/fa';
+import { useRef, useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import "../Styles/main.css"
 
 function Navbar() {
     const navRef = useRef();
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        // Function to handle scroll event
+        const handleScroll = () => {
+            if (window.scrollY > 80) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const showNavbar = () => {
         navRef.current.classList.toggle('responsive_nav');
     }
+
     return (
         <header>
             <label className='logo'>In1Touch</label>
-            <nav ref={navRef}>
+            <nav ref={navRef} className={isScrolled ? 'fixed_nav' : ''}>
                 <a href="/#">Home</a>
                 <a href="/#">View Profile</a>
                 <a href="/#">Memberships</a>
