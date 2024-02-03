@@ -10,7 +10,7 @@ function Navbar() {
     }
     return (
         <header>
-            <h3>Logo</h3>
+            <label className='logo'>In1Touch</label>
             <nav ref={navRef}>
                 <a href="/#">Home</a>
                 <a href="/#">View Profile</a>

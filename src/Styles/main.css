@@ -21,19 +21,33 @@ header {
     height: 80px;
     padding: 0 2rem;
     background-color: var(--mainColor);
-    color: var(--textColor);
+    /* color: var(--textColor); */
+    background: #0082e6;
 }
 
 nav a{
     margin: 0 2rem;
     color: var(--textColor);
     text-decoration: none;
+    /* background: #0082e6; */
+    font-weight: bold;
 
 }
 
 nav a:hover{
-    color: var(--secondaryColor);
+    /* color: var(--secondaryColor); */
+    background: #1b9bff;
+    transition: .5s;
+    padding: 8px;
 }
+
+label.logo{
+    color: var(--textColor);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
 
 
 header .nav-btn {
@@ -70,4 +84,5 @@ header .nav-btn {
     header .responsive_nav{
         transform: none;
     }
+
 }
