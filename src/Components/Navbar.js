@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "../Styles/main.css"
+import in1TouchLogo from '../Images/logo-in1touch.png'; 
+
 
 function Navbar() {
     const navRef = useRef();
@@ -31,7 +33,7 @@ function Navbar() {
 
     return (
         <header>
-            <label className='logo'>In1Touch</label>
+            <img src={in1TouchLogo} alt="In1Touch Logo" className='logo' />
             <nav ref={navRef} className={isScrolled ? 'fixed_nav' : ''}>
                 <a href="/#">Home</a>
                 <a href="/#">View Profile</a>

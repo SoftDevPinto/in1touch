@@ -28,7 +28,7 @@ header {
     justify-content: space-between;
     height: 80px;
     padding: 0 2rem;
-    background: #0082e6; 
+    background: #ffffff; 
     /* Removed the second background property to avoid conflict */
     color: var(--textColor);
     margin-bottom: 100px;
@@ -36,18 +36,20 @@ header {
 
 nav a{
     margin: 0 2rem;
-    color: var(--textColor);
+    color: #888686;
     text-decoration: none;
     /* background: #0082e6; */
-    font-weight: bold;
+    font-weight: normal;
 
 }
 
 nav a:hover{
     /* color: var(--secondaryColor); */
-    background: #1b9bff;
+    background: #565657;
     transition: .5s;
     padding: 8px;
+    color: white;
+    border-radius: 5px;
 }
 
 label.logo{
