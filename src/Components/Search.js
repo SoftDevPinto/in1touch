@@ -166,7 +166,8 @@ const Search = () => {
   const [yearFilter, setYearFilter] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  const yearOptions = ["All Years", "2022", "2021", "2020", "2019", "2018", "2017", "2016"]; // Define a list of years including "All Years"
+  // This is a function i was trying to create for a dropdown menu for the year filter but it's not working right now.
+  // const yearOptions = ["All Years", "2022", "2021", "2020", "2019", "2018", "2017", "2016"]; // Define a list of years including "All Years"
 
 
 

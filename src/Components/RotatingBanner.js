@@ -8,7 +8,7 @@ const RotatingBanner = ({ images }) => {
   useEffect(() => {
     const rotateBanner = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000); // Rotate every 30 seconds (adjust as needed)
+    }, 10000); // Rotate every 30 seconds 
 
     return () => {
       clearInterval(rotateBanner);
