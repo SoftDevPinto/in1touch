@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400;1,500&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+    /* font-family: 'Titillium Web', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding-top: 80px;
 }
 
 :root{
@@ -15,25 +23,47 @@
 }
 
 header {
+    position: fixed; /* Make the header fixed position */
+    top: 0; /* Align it to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other content */
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
     padding: 0 2rem;
-    background-color: var(--mainColor);
+    background: #ffffff; 
+    /* Removed the second background property to avoid conflict */
     color: var(--textColor);
+    margin-bottom: 100px;
 }
 
 nav a{
-    margin: 0 2rem;
-    color: var(--textColor);
+    margin: 0 1rem;
+    color: #6E7885;
     text-decoration: none;
+    /* background: #0082e6; */
+    font-weight: normal;
+    justify-content: center;
 
 }
 
 nav a:hover{
-    color: var(--secondaryColor);
+    /* color: var(--secondaryColor); */
+    background: #0A5193;
+    transition: .5s;
+    padding: 6px;
+    color: white;
+    border-radius: 5px;
 }
+
+label.logo{
+    color: var(--textColor);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
 
 
 header .nav-btn {
@@ -70,4 +100,28 @@ header .nav-btn {
     header .responsive_nav{
         transform: none;
     }
+
+    header .fixed_nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--mainColor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000; /* Ensure it's above other content */
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .footer {
+        position: fixed;
+        background-color: gray;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 8px;
+        text-align: center;
+      }
+
 }
