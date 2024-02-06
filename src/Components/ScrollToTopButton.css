@@ -19,7 +19,7 @@
   }
   
   .scroll-to-top-button:hover {
-    background-color: #007bff; /* Blue button background color on hover */
+    background-color: #0A5193; /* Blue button background color on hover */
     color: #fff; /* White button text color on hover */
     transform: scale(1.1);
   }

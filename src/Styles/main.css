@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400;1,500&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+    /* font-family: 'Titillium Web', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -35,19 +39,20 @@ header {
 }
 
 nav a{
-    margin: 0 2rem;
-    color: #888686;
+    margin: 0 1rem;
+    color: #6E7885;
     text-decoration: none;
     /* background: #0082e6; */
     font-weight: normal;
+    justify-content: center;
 
 }
 
 nav a:hover{
     /* color: var(--secondaryColor); */
-    background: #565657;
+    background: #0A5193;
     transition: .5s;
-    padding: 8px;
+    padding: 6px;
     color: white;
     border-radius: 5px;
 }

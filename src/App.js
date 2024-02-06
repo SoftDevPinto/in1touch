@@ -4,6 +4,7 @@ import Search from './Components/Search';
 import Footer from './Components/Footer';
 import ScrollToTopButton from './Components/ScrollToTopButton';
 import RotatingBanner from './Components/RotatingBanner';
+// import DateFilter from './Components/DataFilter';
 
 function App() {
   // Define your banner images here with correct paths
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <RotatingBanner images={bannerImages} /> {/* Pass the banner images as a prop */}
       <Search />
+      {/* <DateFilter /> */}
       <Footer />
       <ScrollToTopButton />
     </React.Fragment>
